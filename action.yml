@@ -1,0 +1,15 @@
+name: 'Assign team PR review'
+description: 'Individually assign team members as a pull request reviewers. All at once.'
+inputs:
+  github_token:
+    description: 'The token to use to access the GitHub API.'
+    required: true
+  org:
+    description: 'The organization that hosts the team.'
+    required: true
+  team_slug:
+    description: 'The team which members should be assigned as reviewers.'
+    required: true
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
